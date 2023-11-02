@@ -26,7 +26,23 @@ These steps provide a comprehensive guide for creating and maintaining a generat
 
 It emphasizes user interaction, collaboration, and continuous improvement to ensure the library's success.
 
-Here's a step-by-step outline:
+Before we disseminate this project, here are some basic estimations relating to our target industries:
+
+As a rough estimate, a mid-sized container ship, such as a Panamax-class vessel, could emit around 5,000 to 10,000 tons of carbon dioxide equivalent (CO2e) per year.
+
+However, larger container ships, like the Ultra Large Container Vessels (ULCVs), can emit significantly more, potentially exceeding 20,000 tons of CO2e annually.
+
+If there are 30+ million shipping containers being transported around the world by a fleet of 5,517 container vessels, then that amounts to 55 million tons of CO2e a year on average.
+
+A mid-sized oil tanker (around 150,000 to 200,000 deadweight tons) might emit approximately 300,000 to 600,000 tons of carbon dioxide equivalent (CO2e) per year.
+
+Larger oil tankers, known as Very Large Crude Carriers (VLCCs) or Ultra Large Crude Carriers (ULCCs), can emit significantly more, potentially exceeding a million tons of CO2e annually.
+
+If there are 14,309 oil/chemical tankers, then that amounts to 7.1 billion tons of CO2e on average annually.
+
+
+
+Now that's out of the way, here's a step-by-step outline:
 
 **Step 1: Define Objectives and Scope**
 
