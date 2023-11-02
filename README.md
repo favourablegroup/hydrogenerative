@@ -1,4 +1,4 @@
-Creating a JavaScript library called "hydrogenerative.js" is a substantial development project, and it involves several complex components. In this readme, I will provide we with a high-level outline of the process, but please be aware that building such a library is a significant undertaking that may require a team of developers and domain experts. 
+Creating a JavaScript library called "hydrogenerative.js" is a substantial development project, and it involves several complex components. In this readme, I will provide you with a high-level outline of the process, but please be aware that building such a library is a significant undertaking that may require a team of developers and domain experts. 
 
 The key steps discussed in this project brief include:
 
