@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Hydrogenerative</title>
+  <style>
+    body { margin: 0; }
+    canvas { width: 100%; height: 100% }
+  </style>
+  <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+  <script src="https://threejs.org/build/three.r158.min.js"></script>
+  <script src="hydrogenerative.js"></script>
+</head>
+<body>
+  <script>
+      // Create an instance of the Hydrogenerative object
+      var myHydrogenerative = new Hydrogenerative();
+
+      // Check the properties of the object
+      console.log(myHydrogenerative.models); // Should log: []
+      console.log(myHydrogenerative.templates); // Should log: []
+      console.log(myHydrogenerative.errors); // Should log: []
+
+      // Add a model and a template to the object
+      myHydrogenerative.addModel(model1);
+      myHydrogenerative.addTemplate(template1);
+
+      // Check the properties of the object again
+      console.log(myHydrogenerative.models); // Should log: [model1]
+      console.log(myHydrogenerative.templates); // Should log: [template1]
+
+      // Render the scene
+      myHydrogenerative.render();
+  </script>
+</body>
+</html>
