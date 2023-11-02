@@ -195,7 +195,7 @@ Here's a step-by-step outline:
 
     1.5 User Personas:
 
-    Create user personas to better understand our target users. Identify their needs, preferences, and pain points. This information will help we design a user-friendly interface and features.
+    Create user personas to better understand our target users. Identify their needs, preferences, and pain points. This information will help us design a user-friendly interface and features.
 
     1. **User personas / different perspectives**
 
@@ -239,7 +239,7 @@ Here's a step-by-step outline:
 
         These personas represent key stakeholders within shipping companies. Captain Christopher, Dr. Maria, and CFO Laura have different roles, responsibilities, and priorities when it comes to retrofitting vessels for green hydrogen conversion. our library should cater to their diverse needs and preferences, providing tools and information that enable them to collaborate effectively and make informed decisions.
 
-        Understanding these personas can help we design a user-friendly interface and features that address the unique challenges and objectives of each user group, ultimately making our library more valuable to its intended audience.
+        Understanding these personas can help us design a user-friendly interface and features that address the unique challenges and objectives of each user group, ultimately making our library more valuable to its intended audience.
 
     1.6 Define Data Requirements:
 
@@ -383,7 +383,7 @@ Here's a step-by-step outline:
 
     1.9 User Feedback and Input:
 
-    Seek input from potential users and stakeholders in the marine technology and infrastructure field. Their insights can help we refine our objectives and scope.
+    Seek input from potential users and stakeholders in the marine technology and infrastructure field. Their insights can help us refine our objectives and scope.
 
     1. **Identify Key Stakeholders:**
         
@@ -1667,15 +1667,15 @@ Here's a step-by-step outline:
             - Encourage users to provide feedback on the documentation. They can point out areas that need clarification, additional examples, or updates.
 
             **Step 4.1.9.6: Automate Documentation Generation**
-            - Consider using documentation generation tools like JSDoc or other code documentation generators. These tools can help we automate the process of generating API documentation from code comments.
+            - Consider using documentation generation tools like JSDoc or other code documentation generators. These tools can help us automate the process of generating API documentation from code comments.
 
             **Step 4.1.9.7: Maintain a Changelog**
-            - Maintain a changelog that lists changes made to our library and corresponding updates to the documentation. This can help we keep track of what has been modified.
+            - Maintain a changelog that lists changes made to our library and corresponding updates to the documentation. This can help us keep track of what has been modified.
 
             By consistently updating our API documentation, we provide users with accurate and valuable information, enhancing their experience and making it easier for them to use our generative modeling library effectively.
 
         **Step 4.1.10: Use Documentation Tools**
-        - Consider using documentation generation tools like JSDoc, which can help we generate API documentation automatically from code comments. This makes it easier to keep our documentation in sync with our code.
+        - Consider using documentation generation tools like JSDoc, which can help us generate API documentation automatically from code comments. This makes it easier to keep our documentation in sync with our code.
 
         1. **Documentation tools**
 
@@ -2016,7 +2016,7 @@ Here's a step-by-step outline:
             - Provide informative error messages and guidance on how to correct errors. Users should understand why their input is invalid and how to fix it.
 
             5. **Error Logging**:
-            - Implement error logging to record and track errors that occur during the use of the library. This can help we identify and address recurring issues.
+            - Implement error logging to record and track errors that occur during the use of the library. This can help us identify and address recurring issues.
 
             6. **Exception Handling**:
             - Handle exceptions gracefully to prevent crashes or abrupt failures. Provide fallbacks or alternative paths when errors occur.
@@ -2197,7 +2197,7 @@ Here's a step-by-step outline:
             - Review our documentation to ensure that it accurately represents the library's features and usage. Update documentation as needed.
 
             14. **Debugging Tools**:
-            - Equip our development environment with debugging tools and IDE features that help we identify and fix issues more easily.
+            - Equip our development environment with debugging tools and IDE features that help us identify and fix issues more easily.
 
             15. **Error Logs and Reporting**:
             - Implement error logging to record and track issues that occur in the live environment. Use this information to diagnose and resolve problems.
