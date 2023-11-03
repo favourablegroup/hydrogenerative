@@ -8,38 +8,37 @@
   <script src="hydrogenerative.js"></script>
   <link href="https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.0/themes/base/jquery-ui.css">
-  <script id="starfield" type="text/plain">
-  // starfield.glsl
-  
-  precision mediump float;
-  
-  uniform float time;
-  uniform vec2 resolution;
-  uniform vec4 prevFrame;
-  uniform vec2 parallaxOffset;
-  
-  void main() {
-    vec2 uv = gl_FragCoord.xy / resolution.xy;
-    vec3 color = vec3(0.0);
-  
-    for (int i = 0; i < 100; i++) {
-      float x = float(i) / 100.0;
-      float y = fract(sin(float(i) * 12.9898 + time) * 43758.5453);
-      vec2 position = vec2(x, y) * 2.0 - 1.0 + parallaxOffset;
-  
-      float distance = length(position - uv);
-      color += vec3(1.0 - distance * distance) * vec3(y, y, y);
-    }
-  
-    vec4 currentFrame = vec4(color, 1.0);
-    gl_FragColor = mix(prevFrame, currentFrame, 0.1);
-  }
-
-  </script>
 </head>
 <body>
-    <a-scene>
-        <a-sky shader="#starfield"></a-sky>
-    </a-scene>
+  <a-scene background="color: #000000">
+    <a-assets>
+      <script id="starfield" type="text/plain">
+        precision mediump float;
+        
+        uniform float time;
+        uniform vec2 resolution;
+        uniform vec4 prevFrame;
+        uniform vec2 parallaxOffset;
+        
+        void main() {
+          vec2 uv = gl_FragCoord.xy / resolution.xy;
+          vec3 color = vec3(0.0);
+        
+          for (int i = 0; i < 100; i++) {
+            float x = float(i) / 100.0;
+            float y = fract(sin(float(i) * 12.9898 + time) * 43758.5453);
+            vec2 position = vec2(x, y) * 2.0 - 1.0 + parallaxOffset;
+        
+            float distance = length(position - uv);
+            color += vec3(1.0 - distance * distance) * vec3(y, y, y);
+          }
+        
+          vec4 currentFrame = vec4(color, 1.0);
+          gl_FragColor = mix(prevFrame, currentFrame, 0.1);
+        }
+      </script>
+    </a-assets>
+    <a-sky shader="#starfield"></a-sky>
+  </a-scene>
 </body>
 </html>
