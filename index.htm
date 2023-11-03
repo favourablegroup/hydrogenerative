@@ -6,54 +6,15 @@
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.min.js"></script>
   <script src="hydrogenerative.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.0/themes/base/jquery-ui.css">
-    <style>
-    @font-face {
-      font-family: 'Zen Dots';
-      src: url('https://fonts.gstatic.com/s/zendots/v12/XRXX3ICfm00IGoesQdaNRs7nczIHNHI.woff2') format('woff2');
-    }
-
-    .a-text {
-      font-family: 'Zen Dots';
-    }
-  </style>
 </head>
 <body>
-  <a-scene id="scene">
-    <!-- A-Frame entities will be loaded here -->
-  </a-scene>
-  <button id="loadScene">Load Scene</button>
-  <div id="dialog" title="Select a Template" style="display:none;">
-    <select id="templates">
-      <option value="template1.htm">Template 1</option>
-      <option value="template2.htm">Template 2</option>
-      <!-- Add more options as needed -->
-    </select>
-    <button id="load">Load</button>
-    <button id="cancel">Cancel</button>
-  </div>
-
-  <script>
-    // Initialize the dialog
-    $( "#dialog" ).dialog();
-
-    // Handle the Load Scene button click
-    $( "#loadScene" ).click(function() {
-      $( "#dialog" ).dialog( "open" );
-    });
-
-    // Handle the Load button click
-    $( "#load" ).click(function() {
-      var template = $( "#templates" ).val();
-      $( "#scene" ).load(template, function() {
-        $( "#dialog" ).dialog( "close" );
-      });
-    });
-
-    // Handle the Cancel button click
-    $( "#cancel" ).click(function() {
-      $( "#dialog" ).dialog( "close" );
-    });
-  </script>
+    <a-scene>
+        <a-assets>
+          <a-shader id="starfield" src="starfield.glsl"></a-shader>
+        </a-assets>
+        <a-sky shader="#starfield"></a-sky>
+      </a-scene>
 </body>
 </html>
