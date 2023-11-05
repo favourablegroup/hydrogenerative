@@ -3,20 +3,19 @@
 <head>
   <title>Black Hole</title>
   <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
-  <script src="https://unpkg.com/aframe-postprocessing-component@1.2.0/dist/aframe-postprocessing-component.min.js"></script>
 </head>
 <body>
-    <a-scene renderer="colorManagement: true">
+    <a-scene>
       <a-assets>
         <img id="skyTexture" src="4k-space-texture.jpg">
         <a-asset-item id="blackHole" src="blackhole.glb"></a-asset-item>
+        <a-asset-item id="clippIt" src="clippit.glb"></a-asset-item>
       </a-assets>
       <a-sky src="#skyTexture"></a-sky>
-        <a-entity gltf-model="#blackHole" scale="3 3 3" position="0 0 -10" animation="property: rotation; to: 0 360 0; dur: 10000; easing: linear; loop: true"></a-entity>
+      <a-entity gltf-model="#blackHole" scale="3 3 3" position="0 0 -10" animation="property: rotation; to: 0 360 0; dur: 10000; easing: linear; loop: true"></a-entity>
+      <a-entity gltf-model="#model" position="-10 0 -10" look-at="#cursor"></a-entity>
       <a-camera>
         <a-cursor></a-cursor>
-        <a-postprocessing bloom="strength: 1.5; radius: 0.5;" depthOfField="focalDistance: 2.0; focalLength: 0.02; bokehScale: 2.0; height: 480;">
-        </a-postprocessing>
       </a-camera>
     </a-scene>
 </body>
