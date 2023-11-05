@@ -1,16 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Hydrogenerative</title>
+  <title>Black Hole</title>
   <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.min.js"></script>
-  <script src="hydrogenerative.js"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.0/themes/base/jquery-ui.css">
+  <script src="https://unpkg.com/aframe-postprocessing-component@1.2.0/dist/aframe-postprocessing-component.min.js"></script>
 </head>
 <body>
-    <a-scene>
+    <a-scene renderer="colorManagement: true">
       <a-assets>
         <img id="skyTexture" src="4k-space-texture.jpg">
         <a-asset-item id="blackHole" src="blackhole.glb"></a-asset-item>
@@ -19,6 +15,7 @@
         <a-entity gltf-model="#blackHole" scale="3 3 3" position="0 0 -10" animation="property: rotation; to: 0 360 0; dur: 10000; easing: linear; loop: true"></a-entity>
       <a-camera>
         <a-cursor></a-cursor>
+          <a-postprocessing tiltShift="radius: 0.03; edgeBlending: 0.5;"></a-postprocessing>
       </a-camera>
     </a-scene>
 </body>
