@@ -15,7 +15,7 @@
         <a-entity gltf-model="#blackHole" scale="3 3 3" position="0 0 -10" animation="property: rotation; to: 0 360 0; dur: 10000; easing: linear; loop: true"></a-entity>
       <a-camera>
         <a-cursor></a-cursor>
-          <a-postprocessing tiltShift="radius: 0.5; edgeBlending: 0.5;"></a-postprocessing>
+        <a-postprocessing bloom="strength: 1.5; radius: 0.5;" depthOfField="focalDistance: 2.0; focalLength: 0.02; bokehScale: 2.0; height: 480;">
       </a-camera>
     </a-scene>
 </body>
