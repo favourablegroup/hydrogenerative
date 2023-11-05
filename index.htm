@@ -4,6 +4,11 @@
   <title>Black Hole</title>
   <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
   <script src="https://unpkg.com/aframe-event-set-component@5.0.0/dist/aframe-event-set-component.min.js"></script>
+  <style>
+  #clippIt {
+    outline: 2px solid white;
+  }
+</style>
 </head>
 <body>
     <a-scene>
@@ -14,12 +19,13 @@
       </a-assets>
       <a-sky src="#skyTexture"></a-sky>
       <a-entity gltf-model="#blackHole" scale="3 3 3" position="0 0 -10" animation="property: rotation; to: 0 360 0; dur: 10000; easing: linear; loop: true"></a-entity>
-      <a-entity gltf-model="#clippIt" position="-10 0 -10"  event-set__click="_event: click; _target: #dialog; visible: true"></a-entity>
+      <a-entity gltf-model="#clippIt" position="-10 0 -10" event-set__click="_event: click; _target: #dialog; visible: true" event-set__mouseenter="_event: mouseenter; color: #FFF" event-set__mouseleave="_event: mouseleave; color: #000"></a-entity>
       <a-entity id="dialog" visible="false">
         <a-text value="This is such a nice black hole! Thanks for being here with me! - Clippy" position="0 1.6 -2" scale="1.5 1.5 1.5" color="#FFF"></a-text>
       </a-entity>
       <a-camera>
         <a-cursor></a-cursor>
+        <a-raycaster></a-raycaster>
       </a-camera>
     </a-scene>
 </body>
