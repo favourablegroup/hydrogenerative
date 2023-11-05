@@ -11,13 +11,17 @@
 </head>
 <body>
   <a-scene>
-        <a-assets>
-          <img id="skyTexture" src="desert-sky.jpg">
-        </a-assets>
-        <a-sky src="#skyTexture"></a-sky>
-        <a-camera>
-          <a-cursor></a-cursor>
-        </a-camera>
+    <a-scene>
+      <a-assets>
+        <img id="skyTexture" src="2k_stars_milky_way.jpg">
+        <img id="planetTexture" src="4k_eris_fictional.jpg">
+      </a-assets>
+      <a-sky src="#skyTexture"></a-sky>
+      <a-sphere src="#planetTexture" position="0 0 -5" radius="2"></a-sphere>
+      <a-camera>
+        <a-cursor></a-cursor>
+      </a-camera>
+    </a-scene>
     </a-scene>
 </body>
 </html>
