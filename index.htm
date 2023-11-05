@@ -21,7 +21,9 @@
       <a-entity gltf-model="#blackHole" scale="3 3 3" position="0 0 -10" animation="property: rotation; to: 0 360 0; dur: 10000; easing: linear; loop: true"></a-entity>
       <a-entity gltf-model="#clippIt" scale="0.5 0.5 0.5" position="-0.5 1.6 -2" event-set__click="_event: click; _target: #dialog; visible: true" event-set__mouseenter="_event: mouseenter; color: #FFF" event-set__mouseleave="_event: mouseleave; color: #000"></a-entity>
       <a-entity id="dialog" visible="false">
-        <a-text value="This is such a nice black hole! Thanks for being here with me! - Clippy" position="0 1.6 -2" scale="1.5 1.5 1.5" color="#FFF"></a-text>
+        <a-text value="This is such a nice black hole!
+                      Thanks for being here with me!
+                      - Clippy" position="0 1.6 -2" scale="1.5 1.5 1.5" color="#FFF"></a-text>
       </a-entity>
       <a-camera>
         <a-cursor></a-cursor>
