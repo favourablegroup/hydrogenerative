@@ -13,10 +13,10 @@
     <a-scene>
       <a-assets>
         <img id="skyTexture" src="4k-space-texture.jpg">
-        <img id="planetTexture" src="4k_eris_fictional.jpeg">
+        <a-asset-item id="blackHole" src="blackhole.glb"></a-asset-item>
       </a-assets>
       <a-sky src="#skyTexture"></a-sky>
-      <a-sphere src="#planetTexture" position="0 0 -5" radius="2" animation="property: rotation; to: 360 360 360; dur: 10000; easing: linear; loop: true"></a-sphere>
+        <a-entity gltf-model="#blackHole"></a-entity>
       <a-camera>
         <a-cursor></a-cursor>
       </a-camera>
