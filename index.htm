@@ -4,9 +4,19 @@
   <title>Black Hole</title>
   <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
   <script src="https://unpkg.com/aframe-event-set-component@5.0.0/dist/aframe-event-set-component.min.js"></script>
+    <script>
+    AFRAME.registerComponent('toggle-dialog', {
+      init: function() {
+        this.el.addEventListener('click', (e) => {
+          let dialog = document.querySelector('#dialog');
+          dialog.setAttribute('visible', !dialog.getAttribute('visible'));
+        });
+      }
+    });
+  </script>
 </head>
 <body>
-    <a-scene>
+    <a-scene cursor="rayOrigin: mouse">
       <a-assets>
         <img id="skyTexture" src="4k-space-texture.jpg">
         <a-asset-item id="blackHole" src="blackhole.glb"></a-asset-item>
@@ -14,7 +24,7 @@
       </a-assets>
       <a-sky src="#skyTexture"></a-sky>
       <a-entity gltf-model="#blackHole" scale="3 3 3" position="0 0 -10" animation="property: rotation; to: 0 360 0; dur: 10000; easing: linear; loop: true"></a-entity>
-      <a-entity gltf-model="#clippIt" scale="0.5 0.5 0.5" position="-0.2 1.6 -2" event-set__click="_event: click; _target: #dialog; visible: true"></a-entity>
+      <a-entity gltf-model="#clippIt" scale="0.5 0.5 0.5" position="-0.2 1.6 -2" toggle-dialog></a-entity>
       <a-entity id="dialog" visible="false">
         <a-text value="This is such a nice black hole!
                        Thanks for being here with me!
