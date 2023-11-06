@@ -5,14 +5,30 @@
   <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
   <script src="https://unpkg.com/aframe-event-set-component@5.0.0/dist/aframe-event-set-component.min.js"></script>
     <script>
-    AFRAME.registerComponent('toggle-dialog', {
-      init: function() {
-        this.el.addEventListener('click', (e) => {
-          let dialog = document.querySelector('#dialog');
-          dialog.setAttribute('visible', !dialog.getAttribute('visible'));
-        });
-      }
-    });
+      AFRAME.registerComponent('toggle-dialog', {
+        init: function() {
+          this.facts = ["1. You Can’t Directly See a Black Hole.",
+                        "2. Our Milky Way Probably Has a Black Hole.", 
+                        "3. Dying Stars Lead to Stellar Black Holes."
+                        "4. Black Holes Are Funky." 
+                        "5. The First Black Hole Wasn’t Discovered Until X-Ray Astronomy was Used."
+                        "6. The Closest Black Hole is 20,000 Light-Years Away."
+                        "7. We Don’t Know if Wormholes Exist."
+                        "8. Black Holes Are Only Dangerous if You Get Too Close."
+                        "9. Black Holes Are Constantly Used in Science Fiction." ];
+          this.currentFact = 0;
+          this.el.addEventListener('click', (e) => {
+            let dialog = document.querySelector('#dialog');
+            if (this.currentFact < this.facts.length) {
+              dialog.setAttribute('text', 'value', this.facts[this.currentFact]);
+              dialog.setAttribute('visible', true);
+              this.currentFact++;
+            } else {
+              dialog.setAttribute('visible', false);
+            }
+          });
+        }
+      });
   </script>
 </head>
 <body>
