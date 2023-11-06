@@ -30,6 +30,34 @@
         }
       });
   </script>
+  <script>
+    AFRAME.registerShader('bloom', {
+      schema: {
+        color: {type: 'color', is: 'uniform', default: 'white'},
+        intensity: {type: 'number', is: 'uniform', default: 1.0}
+      },
+    
+      vertexShader: `
+        varying vec2 vUv;
+    
+        void main() {
+          vUv = uv;
+          gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0);
+        }
+      `,
+    
+      fragmentShader: `
+        varying vec2 vUv;
+        uniform vec3 color;
+        uniform float intensity;
+    
+        void main() {
+          vec3 brightColor = intensity * color;
+          gl_FragColor = vec4(brightColor, 1.0);
+        }
+      `
+    });
+  </script>
 </head>
 <body>
     <a-scene cursor="rayOrigin: mouse">
