@@ -30,6 +30,24 @@
         }
       });
   </script>
+  <script>
+  AFRAME.registerComponent('show-text-on-approach', {
+    init: function () {
+      var el = this.el;
+      var textContainer = document.querySelector('#textContainer');
+      var floatingText = document.querySelector('#floatingText');
+
+      el.addEventListener('mouseenter', function () {
+        textContainer.setAttribute('visible', true);
+        floatingText.emit('showText');
+      });
+
+      el.addEventListener('mouseleave', function () {
+        textContainer.setAttribute('visible', false);
+      });
+    }
+  });
+</script>
 </head>
 <body>
     <a-scene cursor="rayOrigin: mouse">
@@ -46,6 +64,12 @@
       </a-assets>
       <a-sky src="#skyTexture"></a-sky>
       <a-entity gltf-model="#blackHole" scale="3 3 3" position="0 0 -10" animation="property: rotation; to: 0 360 0; dur: 10000; easing: linear; loop: true"></a-entity>
+      <a-entity id="textContainer" position="0 0 -5">
+        <a-text id="floatingText" value="BH-7A" position="0 1.5 0" align="center" opacity="0"
+                look-at="#camera" animation="property: opacity; to: 1; dur: 1000; startEvents: showText"
+                visible="false">
+        </a-text>
+      </a-entity>
       <a-entity gltf-model="#clippIt" scale="0.5 0.5 0.5" position="-0.2 1.6 -2" toggle-dialog></a-entity>
       <a-entity id="dialog" visible="false">
         <a-text value="Keep clicking for some facts about black holes!" position="0 1.6 -2" scale="1.5 1.5 1.5" color="#FFF"></a-text>
