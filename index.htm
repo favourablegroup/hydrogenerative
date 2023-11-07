@@ -31,24 +31,6 @@
         }
       });
   </script>
-  <script>
-  AFRAME.registerComponent('show-text-on-approach', {
-    init: function () {
-      var el = this.el;
-      var textContainer = document.querySelector('#textContainer');
-      var floatingText = document.querySelector('#floatingText');
-
-      el.addEventListener('mouseenter', function () {
-        textContainer.setAttribute('visible', true);
-        floatingText.emit('showText');
-      });
-
-      el.addEventListener('mouseleave', function () {
-        textContainer.setAttribute('visible', false);
-      });
-    }
-  });
-</script>
 </head>
 <body>
     <a-scene cursor="rayOrigin: mouse">
@@ -60,16 +42,21 @@
         <a-asset-item id="greenMid" src="green_mid.glb"></a-asset-item>
         <a-asset-item id="bottomBar" src="bottom_bar.glb"></a-asset-item>
         <a-asset-item id="blueMid" src="blue_mid.glb"></a-asset-item>
+        <a-asset-item id="ajf12Dvergr" src="ajf-12_dvergr.glb"></a-asset-item>
       </a-assets>
       <a-sky src="#skyTexture"></a-sky>
-      <a-entity gltf-model="#blackHole" scale="3 3 3" position="0 0 -10" animation="property: rotation; to: 0 360 0; dur: 10000; easing: linear; loop: true"></a-entity>
-      <a-entity id="textContainer" position="0 0 -5">
-        <a-text id="floatingText" value="BH-7A" position="0 1.5 0" align="center" opacity="0"
-                look-at="#camera" animation="property: opacity; to: 1; dur: 1000; startEvents: showText"
-                visible="false">
-        </a-text>
+      <a-entity gltf-model="#blackHole" scale="10 10 10" position="0 0 -50" animation="property: rotation; to: 0 360 0; dur: 10000; easing: linear; loop: true"></a-entity>
+      <a-entity id="path" curve="type: catmullrom; closed: true">
+        <a-curve-point position="0 1.6 8"></a-curve-point>
+        <a-curve-point position="4 1.6 6"></a-curve-point>
+        <a-curve-point position="2 1.6 2"></a-curve-point>
+        <a-curve-point position="-2 1.6 4"></a-curve-point>
       </a-entity>
-      <a-entity gltf-model="#clippIt" scale="0.5 0.5 0.5" position="0 1.6 -2" toggle-dialog></a-entity>
+      
+      <a-entity gltf-model="#ajf12Dvergr" scale="2.5 2.5 2.5" position="0 1.6 8"
+          animation__path="property: position; dur: 10000; easing: linear; loop: true; from: 0 1.6 8; to: 0 1.6 8"
+          animation__rotation="property: rotation; dur: 10000; easing: linear; loop: true; to: 0 360 0"
+          look-at="#path"></a-entity>      <a-entity gltf-model="#clippIt" scale="0.5 0.5 0.5" position="0 1.6 -2" toggle-dialog></a-entity>
       <a-entity id="dialog" visible="false">
         <a-text value="Keep clicking for some facts about black holes!" position="0 1.6 -2" scale="0.5 0.5 0.5" color="#FFF"></a-text>
       </a-entity>
