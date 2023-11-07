@@ -7,7 +7,8 @@
     <script>
       AFRAME.registerComponent('toggle-dialog', {
         init: function() {
-          this.facts = ["1. You Can’t Directly See a Black Hole.",
+          this.facts = ["Hi! It appears you are near a black hole. Would you like some help?",
+                        "1. You Can’t Directly See a Black Hole.",
                         "2. Our Milky Way Probably Has a Black Hole.", 
                         "3. Dying Stars Lead to Stellar Black Holes.",
                         "4. Black Holes Are Funky.",
@@ -70,15 +71,15 @@
                 visible="false">
         </a-text>
       </a-entity>
-      <a-entity gltf-model="#clippIt" scale="0.5 0.5 0.5" position="-0.2 1.6 -2" toggle-dialog></a-entity>
-      <a-entity id="dialog" visible="false">
-        <a-text value="Keep clicking for some facts about black holes!" position="0 1.6 -2" scale="1.5 1.5 1.5" color="#FFF"></a-text>
-      </a-entity>
       <a-camera>
         <a-entity gltf-model="#tarGet" position="0 0 -1" scale="0.2 0.2 0.2"></a-entity>
         <a-entity gltf-model="#greenMid" position="0 0 -1" scale="0.2 0.2 0.2"></a-entity>
         <a-entity gltf-model="#bottomBar" position="0 0 -1" scale="0.2 0.2 0.2"></a-entity>
         <a-entity gltf-model="#blueMid" position="0 0 -1" scale="0.2 0.2 0.2"></a-entity>
+        <a-entity gltf-model="#clippIt" scale="0.5 0.5 0.5" position="-0.2 1.6 -2" toggle-dialog></a-entity>
+        <a-entity id="dialog" visible="false">
+          <a-text value="Keep clicking for some facts about black holes!" position="0 1.6 -2" scale="1.5 1.5 1.5" color="#FFF"></a-text>
+        </a-entity>
       </a-camera>
     </a-scene>
 </body>
