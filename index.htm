@@ -59,9 +59,7 @@
         <a-asset-item id="tarGet" src="target.glb"></a-asset-item>
         <a-asset-item id="greenMid" src="green_mid.glb"></a-asset-item>
         <a-asset-item id="bottomBar" src="bottom_bar.glb"></a-asset-item>
-        <a-asset-item id="orangeMid" src="orange_mid.glb"></a-asset-item>
         <a-asset-item id="blueMid" src="blue_mid.glb"></a-asset-item>
-        <a-asset-item id="blueLarge" src="blue_large.glb"></a-asset-item>
       </a-assets>
       <a-sky src="#skyTexture"></a-sky>
       <a-entity gltf-model="#blackHole" scale="3 3 3" position="0 0 -10" animation="property: rotation; to: 0 360 0; dur: 10000; easing: linear; loop: true"></a-entity>
@@ -71,15 +69,15 @@
                 visible="false">
         </a-text>
       </a-entity>
+      <a-entity gltf-model="#clippIt" scale="0.5 0.5 0.5" position="0 1.6 -2" toggle-dialog></a-entity>
+      <a-entity id="dialog" visible="false">
+        <a-text value="Keep clicking for some facts about black holes!" position="0 1.6 -2" scale="0.5 0.5 0.5" color="#FFF"></a-text>
+      </a-entity>
       <a-camera>
         <a-entity gltf-model="#tarGet" position="0 0 -1" scale="0.2 0.2 0.2"></a-entity>
         <a-entity gltf-model="#greenMid" position="0 0 -1" scale="0.2 0.2 0.2"></a-entity>
         <a-entity gltf-model="#bottomBar" position="0 0 -1" scale="0.2 0.2 0.2"></a-entity>
         <a-entity gltf-model="#blueMid" position="0 0 -1" scale="0.2 0.2 0.2"></a-entity>
-        <a-entity gltf-model="#clippIt" scale="0.5 0.5 0.5" position="0 0 -1" toggle-dialog></a-entity>
-        <a-entity id="dialog" visible="false">
-          <a-text value="Keep clicking for some facts about black holes!" position="0 0 -1" scale="0.5 0.5 0.5" color="#FFF"></a-text>
-        </a-entity>
       </a-camera>
     </a-scene>
 </body>
